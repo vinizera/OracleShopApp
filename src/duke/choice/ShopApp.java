@@ -22,6 +22,7 @@ public class ShopApp {
         
         System.out.println("Welcome to Duke Choice Shop!");
         System.out.println("CUSTOMER: " + c1.getName() + ", Size: " + c1.getSize());
+        System.out.println("Minumum price: " + Clothing.MIN_PRICE);
         
         
         // Declaring items
