@@ -16,8 +16,8 @@ public class Clothing {
     private String size = "M";
     private double price = 10.0;
     
-    private final double MIN_PRICE = 10.0;
-    private final double MAX_TAX = .2;
+    public final static double MIN_PRICE = 10.0;
+    public final static double TAX_RATE = .2;
 
     // constructors
     public void Clothing(String description, String size, double price) {
@@ -36,7 +36,7 @@ public class Clothing {
     }
     
     public void setSize(String newSize) {
-        this.size = newSize;
+        this.size = newSize.toUpperCase();
     }
     
     public String getSize() {
@@ -48,7 +48,7 @@ public class Clothing {
     }
         
     public double getPrice() {
-        return this.price * (this.MAX_TAX + 1);
+        return this.price * (this.TAX_RATE + 1);
     }
     
 }

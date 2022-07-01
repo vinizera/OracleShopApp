@@ -18,7 +18,7 @@ public class ShopApp {
         // TODO code application logic here
         
         // Declaring customers
-        Customer c1 = new Customer("Pinky", 3);     
+        Customer c1 = new Customer("Pinky", 2);     
         
         System.out.println("Welcome to Duke Choice Shop!");
         System.out.println("CUSTOMER: " + c1.getName() + ", Size: " + c1.getSize());
@@ -33,11 +33,8 @@ public class ShopApp {
         Clothing item2 = new Clothing();
         item2.setDescription("H&M Basic black T-shirt");
         item2.setSize("M");
-        item2.setPrice(10.5);
-        
-        // Checkout and total        
+        item2.setPrice(10.5);       
       
-        
         Clothing item3 = new Clothing();
         item3.setDescription("Rothaus Radler T-shirt");
         
@@ -51,10 +48,13 @@ public class ShopApp {
         item5.setPrice(10.5);
         item5.setSize("S");
         
-        Clothing[] itemsMain = {item1, item3, item4};
+        // Checkout and total
         
-        c1.addItems(itemsMain);
+        //Clothing[] customerItems = {item1, item3, item4};
         
+        //c1.addItems(customerItems);
+        
+
         System.out.printf("TOTAL: $%5.2f", c1.getTotalClothingCost());
         System.out.println();
         

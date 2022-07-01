@@ -21,7 +21,7 @@ public class Customer {
     // constructors
     public Customer(String name, String size) {
         this.name = name;
-        this.size = size;
+        this.size = size.toUpperCase();
     }
     
     public Customer(String name, int aMeasurement) {
@@ -39,11 +39,15 @@ public class Customer {
     
     public double getTotalClothingCost() {
         double total = 0.0;
-        for (Clothing item: items) {
-            System.out.print( "> " + item.getDescription());
-            System.out.printf(": $%5.2f", item.getPrice());
-            System.out.println();
-            total += item.getPrice();
+        try {
+            for (Clothing item: items) {
+                System.out.print( "> " + item.getDescription());
+                System.out.printf(": $%5.2f", item.getPrice());
+                System.out.println();
+                total += item.getPrice();
+            }
+        } catch (NullPointerException e) {
+            return 0.0;
         }
         return total;
     }
